@@ -23,9 +23,9 @@ class KreditController extends Controller
 
         $pokok_utang = $otr - $dp;
 
-        if ($jangka_waktu <= 12) {
+        if ($jangka_waktu > 0 && $jangka_waktu <= 12) {
             $bunga = 12 / 100;
-        } elseif ($jangka_waktu <= 24) {
+        } elseif ($jangka_waktu > 0 && $jangka_waktu <= 24) {
             $bunga = 14 / 100;
         } elseif ($jangka_waktu >24) {
             $bunga = 16.5 / 100;
